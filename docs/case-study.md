@@ -47,7 +47,7 @@ The current web bundle includes recreated visuals for:
 
 ## Demonstrated Result
 
-The synthetic demo demonstrates deterministic classification, explicit review
+The sanitized demo demonstrates deterministic classification, explicit review
 reasons, and safe separation of ready records from exception records. The
 purpose is not to simulate real scale; it is to show repeatable logic,
 explainable controls, and auditable output.
