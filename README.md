@@ -69,7 +69,7 @@ flowchart LR
   F --> G[Audit and reporting]
 ```
 
-## Run The Synthetic Demo
+## Run The Audit-Safe Demo
 
 ```bash
 ./scripts/run_demo.sh

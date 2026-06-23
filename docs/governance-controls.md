@@ -1,6 +1,6 @@
 # Governance Controls
 
-The synthetic demo implements a narrow set of controls that mirror the kinds of
+The sanitized governance demo implements a narrow set of controls that mirror the kinds of
 checks useful in enterprise upgrade planning.
 
 ## Controls

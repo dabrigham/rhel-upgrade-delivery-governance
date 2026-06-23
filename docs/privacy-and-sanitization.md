@@ -1,6 +1,6 @@
 # Privacy And Sanitization
 
-The public repository is a synthetic demonstration. It intentionally excludes:
+The public repository is a sanitized governance demonstration. It intentionally excludes:
 
 - source-company names,
 - employee names,
