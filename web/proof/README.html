@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Proof | RHEL Upgrade Delivery Governance</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    body { margin: 0; color: #172331; font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 22px; }
+    h1 { margin: 0 0 16px; font-size: clamp(32px, 5vw, 54px); line-height: 1.05; }
+    h2 { margin: 34px 0 12px; font-size: 24px; }
+    p, li { color: #506579; }
+    a { color: #2d5f7a; }
+    code, pre { background: #e7f0f4; border-radius: 6px; color: #183449; }
+    code { padding: 2px 5px; }
+    pre { overflow-x: auto; padding: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../index.html">Back to case study</a></p>
+    <h1>Technical Proof</h1>
+    <p>This publishable bundle summarizes the sanitized governance demo for the RHEL upgrade delivery governance case study. It does not contain original enterprise code or production data.</p>
+
+    <h2>What the Demo Proves</h2>
+    <ul>
+      <li>Controlled CSV inputs can be validated before downstream review.</li>
+      <li>Inventory records can be joined to change and task records deterministically.</li>
+      <li>Ready records can be separated from exception records with explicit reasons.</li>
+      <li>The workflow can be rerun and verified with synthetic data.</li>
+    </ul>
+
+    <h2>Local Commands</h2>
+    <pre><code>./scripts/run_demo.sh
+./scripts/verify_public_export.sh</code></pre>
+
+    <h2>Expected Synthetic Behavior</h2>
+    <ul>
+      <li>Deterministic classification of ready and exception records.</li>
+      <li>Explicit review reasons for held records.</li>
+      <li>Safe separation of wave-review records from human-review exceptions.</li>
+    </ul>
+
+    <h2>Publication Boundary</h2>
+    <p>Public release still requires human review and explicit approval. This page is safe static proof, not a claim of production upgrade completion.</p>
+  </main>
+</body>
+</html>

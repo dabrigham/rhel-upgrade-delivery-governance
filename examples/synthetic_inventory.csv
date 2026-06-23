@@ -1,0 +1,6 @@
+server_id,application_id,owner_group,environment,readiness_status,target_wave
+srv-demo-001,app-demo-claims,platform-ops,production,ready,wave-01
+srv-demo-002,app-demo-payments,payments-ops,production,conditional,wave-01
+srv-demo-003,app-demo-reporting,reporting-ops,nonproduction,blocked,wave-02
+srv-demo-004,app-demo-portal,portal-ops,production,ready,wave-02
+srv-demo-005,app-demo-batch,batch-ops,production,ready,wave-03

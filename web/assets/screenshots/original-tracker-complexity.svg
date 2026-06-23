@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized spreadsheet tracker complexity recreation</title>
+  <desc id="desc">A synthetic spreadsheet-like tracker showing generic schedule, ownership, status, and dependency columns.</desc>
+  <rect width="1200" height="620" rx="22" fill="#f6f8fa"/>
+  <rect x="42" y="44" width="1116" height="532" rx="12" fill="#ffffff" stroke="#cfd9e2"/>
+  <rect x="42" y="44" width="1116" height="48" rx="12" fill="#dfe9ef"/>
+  <text x="66" y="75" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#172331">Sanitized Upgrade Tracker Pattern</text>
+  <text x="1040" y="75" font-family="Arial, sans-serif" font-size="14" fill="#506579">filters on</text>
+
+  <g font-family="Arial, sans-serif" font-size="13">
+    <rect x="58" y="118" width="1084" height="42" fill="#2d5f7a"/>
+    <g fill="#ffffff" font-weight="700">
+      <text x="76" y="145">Server Group</text>
+      <text x="194" y="145">Application Group</text>
+      <text x="346" y="145">Environment</text>
+      <text x="466" y="145">Planned Window</text>
+      <text x="610" y="145">Change Record</text>
+      <text x="748" y="145">Task Evidence</text>
+      <text x="888" y="145">Owner Group</text>
+      <text x="1010" y="145">Readiness</text>
+      <text x="1090" y="145">Review</text>
+    </g>
+
+    <g fill="none" stroke="#d8e0e7">
+      <path d="M58 160h1084"/>
+      <path d="M58 210h1084"/>
+      <path d="M58 260h1084"/>
+      <path d="M58 310h1084"/>
+      <path d="M58 360h1084"/>
+      <path d="M58 410h1084"/>
+      <path d="M58 460h1084"/>
+      <path d="M178 118v392"/>
+      <path d="M330 118v392"/>
+      <path d="M450 118v392"/>
+      <path d="M594 118v392"/>
+      <path d="M734 118v392"/>
+      <path d="M874 118v392"/>
+      <path d="M996 118v392"/>
+      <path d="M1080 118v392"/>
+    </g>
+
+    <g fill="#172331">
+      <text x="76" y="191">Server A</text>
+      <text x="194" y="191">Application Group 1</text>
+      <text x="346" y="191">Production</text>
+      <text x="466" y="191">Wave 01</text>
+      <text x="610" y="191">Change Record 001</text>
+      <text x="748" y="191">Task Record 001</text>
+      <text x="888" y="191">Owner Group A</text>
+      <text x="1010" y="191">Ready</text>
+      <text x="1090" y="191">OK</text>
+
+      <text x="76" y="241">Server B</text>
+      <text x="194" y="241">Application Group 2</text>
+      <text x="346" y="241">Production</text>
+      <text x="466" y="241">Wave 01</text>
+      <text x="610" y="241">Change Record 002</text>
+      <text x="748" y="241">Task Record 002</text>
+      <text x="888" y="241">Owner Group B</text>
+      <text x="1010" y="241">Review</text>
+      <text x="1090" y="241">Owner</text>
+
+      <text x="76" y="291">Server C</text>
+      <text x="194" y="291">Application Group 3</text>
+      <text x="346" y="291">Test</text>
+      <text x="466" y="291">Wave 02</text>
+      <text x="610" y="291">Change Record 003</text>
+      <text x="748" y="291">Task Record 003</text>
+      <text x="888" y="291">Owner Group C</text>
+      <text x="1010" y="291">Blocked</text>
+      <text x="1090" y="291">Date</text>
+
+      <text x="76" y="341">Server D</text>
+      <text x="194" y="341">Application Group 4</text>
+      <text x="346" y="341">Production</text>
+      <text x="466" y="341">Wave 03</text>
+      <text x="610" y="341">Change Record 004</text>
+      <text x="748" y="341">Task Record 004</text>
+      <text x="888" y="341">Owner Group D</text>
+      <text x="1010" y="341">Ready</text>
+      <text x="1090" y="341">Task</text>
+    </g>
+
+    <g fill="#eef5f8" stroke="#bdd1dc">
+      <rect x="72" y="132" width="84" height="14" rx="7"/>
+      <rect x="208" y="132" width="96" height="14" rx="7"/>
+      <rect x="480" y="132" width="86" height="14" rx="7"/>
+      <rect x="626" y="132" width="76" height="14" rx="7"/>
+      <rect x="766" y="132" width="78" height="14" rx="7"/>
+    </g>
+  </g>
+  <rect x="84" y="528" width="1032" height="26" rx="13" fill="#e7f0f4"/>
+  <text x="102" y="546" font-family="Arial, sans-serif" font-size="13" fill="#506579">Synthetic recreation: schedule, ownership, readiness, and dependency evidence were mixed into one manually interpreted tracker.</text>
+</svg>

@@ -1,0 +1,9 @@
+flowchart TD
+  A[Inventory baseline] --> C[Schema and ownership checks]
+  B[Change and task records] --> C
+  C --> D{Passes controls?}
+  D -->|Yes| E[Ready for wave review]
+  D -->|No| F[Human review queue]
+  F --> G[Correct source input]
+  G --> C
+

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized linked workbook warning recreation</title>
+  <desc id="desc">A synthetic warning banner showing that linked workbook values could not be updated.</desc>
+  <rect width="1200" height="520" rx="22" fill="#f6f8fa"/>
+  <rect x="80" y="78" width="1040" height="364" rx="14" fill="#ffffff" stroke="#cfd9e2"/>
+  <rect x="80" y="78" width="1040" height="54" rx="14" fill="#eef2f5"/>
+  <text x="108" y="112" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#172331">Workbook Link Status</text>
+
+  <rect x="126" y="172" width="948" height="108" rx="10" fill="#fff4df" stroke="#d9a84d"/>
+  <circle cx="166" cy="226" r="22" fill="#d9a84d"/>
+  <text x="158" y="235" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">!</text>
+  <text x="206" y="214" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#5f4216">Could not update values from a linked workbook.</text>
+  <text x="206" y="247" font-family="Arial, sans-serif" font-size="16" fill="#6b552f">Synthetic source path: \\internal-source\upgrade-data.xlsx</text>
+
+  <g font-family="Arial, sans-serif" font-size="15" fill="#506579">
+    <text x="126" y="326">Risk illustrated:</text>
+    <text x="126" y="354">Linked workbook assumptions can make readiness, ownership, or schedule values depend on external files that are hard to audit.</text>
+    <text x="126" y="384">Governed delivery needs explicit inputs, repeatable refresh rules, and visible exception handling.</text>
+  </g>
+  <rect x="126" y="406" width="948" height="1" fill="#d8e0e7"/>
+  <text x="126" y="432" font-family="Arial, sans-serif" font-size="13" fill="#506579">Synthetic recreation only. No original workbook names, tabs, domains, paths, or production values are shown.</text>
+</svg>

@@ -1,0 +1,10 @@
+[project]
+name = "rhel-upgrade-delivery-governance"
+version = "0.1.0"
+description = "Sanitized portfolio demonstration of governed enterprise OS upgrade planning."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

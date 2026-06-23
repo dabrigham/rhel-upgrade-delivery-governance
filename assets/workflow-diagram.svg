@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Workflow control diagram</title>
+  <desc id="desc">Synthetic inventory and change records pass through controls. Passing records go to wave review. Failed records go to human review and correction.</desc>
+  <style>
+    .box { fill: #ffffff; stroke: #2b465f; stroke-width: 2; rx: 8; }
+    .gate { fill: #e7f0f4; stroke: #2b465f; stroke-width: 2; }
+    .hold { fill: #fff4e5; stroke: #9b6a1f; stroke-width: 2; rx: 8; }
+    .ready { fill: #e8f4ec; stroke: #2d6d46; stroke-width: 2; rx: 8; }
+    .text { font: 600 18px system-ui, -apple-system, Segoe UI, sans-serif; fill: #172331; text-anchor: middle; }
+    .sub { font: 400 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #42566b; text-anchor: middle; }
+    .arrow { stroke: #48657f; stroke-width: 2.5; marker-end: url(#arrow); fill: none; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#48657f"/>
+    </marker>
+  </defs>
+  <rect width="920" height="420" fill="#f6f8fa"/>
+  <rect class="box" x="70" y="70" width="190" height="86"/>
+  <text class="text" x="165" y="108">Inventory</text>
+  <text class="sub" x="165" y="131">baseline</text>
+  <rect class="box" x="70" y="230" width="190" height="86"/>
+  <text class="text" x="165" y="268">Change/task</text>
+  <text class="sub" x="165" y="291">records</text>
+  <rect class="box" x="350" y="150" width="190" height="86"/>
+  <text class="text" x="445" y="188">Controls</text>
+  <text class="sub" x="445" y="211">schema + ownership</text>
+  <polygon class="gate" points="650,193 725,118 800,193 725,268"/>
+  <text class="text" x="725" y="188">Pass?</text>
+  <text class="sub" x="725" y="211">deterministic gate</text>
+  <rect class="ready" x="650" y="20" width="190" height="76"/>
+  <text class="text" x="745" y="53">Ready</text>
+  <text class="sub" x="745" y="76">for wave review</text>
+  <rect class="hold" x="650" y="310" width="190" height="76"/>
+  <text class="text" x="745" y="343">Hold</text>
+  <text class="sub" x="745" y="366">human review</text>
+  <line class="arrow" x1="260" y1="113" x2="350" y2="178"/>
+  <line class="arrow" x1="260" y1="273" x2="350" y2="208"/>
+  <line class="arrow" x1="540" y1="193" x2="650" y2="193"/>
+  <path class="arrow" d="M725 118 C725 100 735 92 745 96"/>
+  <path class="arrow" d="M725 268 C725 292 735 305 745 310"/>
+</svg>
+

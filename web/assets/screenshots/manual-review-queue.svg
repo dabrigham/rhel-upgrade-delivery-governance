@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized manual review queue recreation</title>
+  <desc id="desc">A synthetic derived output table showing match status, confidence, upgrade date, review reason, and evidence source.</desc>
+  <rect width="1200" height="620" rx="22" fill="#f6f8fa"/>
+  <rect x="70" y="62" width="1060" height="482" rx="14" fill="#ffffff" stroke="#cfd9e2"/>
+  <text x="96" y="108" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#172331">Derived Manual Review Queue</text>
+  <text x="96" y="136" font-family="Arial, sans-serif" font-size="15" fill="#506579">Ambiguity is surfaced as review evidence instead of hidden inside tracker interpretation.</text>
+
+  <rect x="96" y="174" width="1008" height="48" rx="8" fill="#2d5f7a"/>
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">
+    <text x="118" y="204">Change Match Status</text>
+    <text x="346" y="204">Confidence</text>
+    <text x="502" y="204">Proposed Upgrade Date</text>
+    <text x="740" y="204">Review Reason</text>
+    <text x="954" y="204">Evidence Source</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="15">
+    <rect x="96" y="222" width="1008" height="64" fill="#ffffff" stroke="#d8e0e7"/>
+    <rect x="116" y="243" width="82" height="26" rx="13" fill="#e4f4ea"/>
+    <text x="136" y="261" fill="#2d6d46" font-weight="700">valid</text>
+    <text x="346" y="261" fill="#172331">high</text>
+    <text x="502" y="261" fill="#172331">Wave 01</text>
+    <text x="740" y="261" fill="#172331">ready_for_wave_review</text>
+    <text x="954" y="261" fill="#172331">matched records</text>
+
+    <rect x="96" y="286" width="1008" height="64" fill="#fbfcfd" stroke="#d8e0e7"/>
+    <rect x="116" y="307" width="138" height="26" rx="13" fill="#fff4df"/>
+    <text x="132" y="325" fill="#8a5f1d" font-weight="700">manual_review</text>
+    <text x="346" y="325" fill="#172331">medium</text>
+    <text x="502" y="325" fill="#172331">Needs review</text>
+    <text x="740" y="325" fill="#172331">multiple_change_candidates</text>
+    <text x="954" y="325" fill="#172331">relationship check</text>
+
+    <rect x="96" y="350" width="1008" height="64" fill="#ffffff" stroke="#d8e0e7"/>
+    <rect x="116" y="371" width="90" height="26" rx="13" fill="#fde8e5"/>
+    <text x="134" y="389" fill="#9b342a" font-weight="700">invalid</text>
+    <text x="346" y="389" fill="#172331">low</text>
+    <text x="502" y="389" fill="#172331">Hold</text>
+    <text x="740" y="389" fill="#172331">missing_change_record</text>
+    <text x="954" y="389" fill="#172331">baseline check</text>
+  </g>
+
+  <rect x="96" y="458" width="1008" height="54" rx="10" fill="#e7f0f4"/>
+  <text x="118" y="490" font-family="Arial, sans-serif" font-size="15" fill="#506579">Improvement shown: the output separates ready records from ambiguous or invalid records with explicit review reasons.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="260" viewBox="0 0 1180 260" role="img" aria-labelledby="title desc">
+  <title id="title">RHEL upgrade governance architecture</title>
+  <desc id="desc">Source inputs flow through normalization, validation, relationship modeling, governance controls, reviewable outputs, and audit reporting.</desc>
+  <style>
+    .box { fill: #ffffff; stroke: #29415a; stroke-width: 2; rx: 8; }
+    .accent { fill: #e7f0f4; stroke: #29415a; stroke-width: 2; rx: 8; }
+    .text { font: 600 18px system-ui, -apple-system, Segoe UI, sans-serif; fill: #172331; text-anchor: middle; }
+    .sub { font: 400 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #42566b; text-anchor: middle; }
+    .arrow { stroke: #48657f; stroke-width: 2.5; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#48657f"/>
+    </marker>
+  </defs>
+  <rect width="1180" height="260" fill="#f6f8fa"/>
+  <g transform="translate(30 70)">
+    <rect class="accent" x="0" y="0" width="135" height="92"/>
+    <text class="text" x="67.5" y="38">Source</text>
+    <text class="sub" x="67.5" y="61">inputs</text>
+    <line class="arrow" x1="145" y1="46" x2="190" y2="46"/>
+    <rect class="box" x="200" y="0" width="135" height="92"/>
+    <text class="text" x="267.5" y="38">Normalize</text>
+    <text class="sub" x="267.5" y="61">fields</text>
+    <line class="arrow" x1="345" y1="46" x2="390" y2="46"/>
+    <rect class="box" x="400" y="0" width="135" height="92"/>
+    <text class="text" x="467.5" y="38">Validate</text>
+    <text class="sub" x="467.5" y="61">controls</text>
+    <line class="arrow" x1="545" y1="46" x2="590" y2="46"/>
+    <rect class="box" x="600" y="0" width="150" height="92"/>
+    <text class="text" x="675" y="38">Model</text>
+    <text class="sub" x="675" y="61">relationships</text>
+    <line class="arrow" x1="760" y1="46" x2="805" y2="46"/>
+    <rect class="box" x="815" y="0" width="150" height="92"/>
+    <text class="text" x="890" y="38">Govern</text>
+    <text class="sub" x="890" y="61">review gates</text>
+    <line class="arrow" x1="975" y1="46" x2="1020" y2="46"/>
+    <rect class="accent" x="1030" y="0" width="120" height="92"/>
+    <text class="text" x="1090" y="38">Audit</text>
+    <text class="sub" x="1090" y="61">outputs</text>
+  </g>
+</svg>
+

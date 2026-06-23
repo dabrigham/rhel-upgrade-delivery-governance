@@ -1,0 +1,6 @@
+server_id,application_id,owner_group,environment,target_wave,change_id,task_id,task_assignment_group,decision,review_gate,reason
+srv-demo-001,app-demo-claims,platform-ops,production,wave-01,chg-demo-1001,task-demo-2001,linux-ops,include,ready_for_wave_review,validated_relationships_and_controls
+srv-demo-002,app-demo-payments,payments-ops,production,wave-01,chg-demo-1002,task-demo-2002,,hold,requires_human_review,missing_task_assignment_group
+srv-demo-003,app-demo-reporting,reporting-ops,nonproduction,wave-02,chg-demo-1003,task-demo-2003,linux-ops,hold,requires_human_review,readiness_not_confirmed;change_not_approved
+srv-demo-004,app-demo-portal,portal-ops,production,wave-02,chg-demo-1004,task-demo-2004,app-ops,include,ready_for_wave_review,validated_relationships_and_controls
+srv-demo-005,app-demo-batch,batch-ops,production,wave-03,chg-demo-1005,task-demo-2005,batch-ops,hold,requires_human_review,invalid_schedule_window

@@ -1,0 +1,8 @@
+# Public-safe example deny-list.
+# Copy this file to scripts/sensitive_terms.local.txt and replace these
+# placeholders with private terms before local verification.
+INTERNAL_COMPANY_NAME
+INTERNAL_DOMAIN
+INTERNAL_APPLICATION_NAME
+INTERNAL_RECORD_ID
+INTERNAL_WORKBOOK_TAB

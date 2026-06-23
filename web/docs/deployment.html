@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deployment Notes | RHEL Upgrade Delivery Governance</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    body { margin: 0; color: #172331; font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 22px; }
+    h1 { margin: 0 0 16px; font-size: clamp(32px, 5vw, 54px); line-height: 1.05; }
+    h2 { margin: 34px 0 12px; font-size: 24px; }
+    p, li { color: #506579; }
+    a { color: #2d5f7a; }
+    code, pre { background: #e7f0f4; border-radius: 6px; color: #183449; }
+    code { padding: 2px 5px; }
+    pre { overflow-x: auto; padding: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../index.html">Back to case study</a></p>
+    <h1>Deployment Notes</h1>
+    <p>The `web/` folder is now a self-contained static bundle. It can be served directly as the site root after review and approval.</p>
+
+    <h2>Local Preview</h2>
+    <pre><code>python -m http.server 8000 --bind 127.0.0.1 --directory web</code></pre>
+    <p>Then open the local page in a browser. The bind option keeps the preview server on the local machine only.</p>
+
+    <h2>Clean Public Export</h2>
+    <p>The current local staging git history is not intended to be pushed publicly because local scanner terms previously existed in that history. When publication is approved, create a fresh export folder with no `.git` history, copy only publication-safe files, confirm the local scanner terms file is excluded, rerun verification, and initialize a new public git repository only after approval.</p>
+
+    <h2>Recommended Hosting</h2>
+    <ul>
+      <li>Use a personal or Brigham Workflow Systems page as the polished front door.</li>
+      <li>Use GitHub as the technical evidence layer.</li>
+      <li>Use LinkedIn Featured for distribution after publishing.</li>
+    </ul>
+
+    <h2>Publication Gate</h2>
+    <p>Do not publish or deploy until the sanitized content is reviewed and explicitly approved.</p>
+  </main>
+</body>
+</html>

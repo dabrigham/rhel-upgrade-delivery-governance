@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized change and task relationship diagram</title>
+  <desc id="desc">A synthetic relationship diagram showing one server connected to one change record and two task records with different owner groups.</desc>
+  <rect width="1200" height="560" rx="22" fill="#f6f8fa"/>
+  <text x="72" y="78" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172331">Why relationship modeling mattered</text>
+  <text x="72" y="108" font-family="Arial, sans-serif" font-size="15" fill="#506579">One-row summaries can hide task-level ownership ambiguity.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#2d5f7a"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="88" y="226" width="190" height="90" rx="12" fill="#ffffff" stroke="#cfd9e2"/>
+    <text x="128" y="264" font-size="18" font-weight="700" fill="#172331">Server A</text>
+    <text x="128" y="292" font-size="14" fill="#506579">Application Group 1</text>
+
+    <line x1="278" y1="271" x2="442" y2="271" stroke="#2d5f7a" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="462" y="226" width="246" height="90" rx="12" fill="#ffffff" stroke="#cfd9e2"/>
+    <text x="508" y="264" font-size="18" font-weight="700" fill="#172331">Change Record 001</text>
+    <text x="508" y="292" font-size="14" fill="#506579">Planned Window: Wave 01</text>
+
+    <line x1="708" y1="254" x2="870" y2="190" stroke="#2d5f7a" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="708" y1="288" x2="870" y2="354" stroke="#2d5f7a" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="892" y="144" width="230" height="92" rx="12" fill="#ffffff" stroke="#cfd9e2"/>
+    <text x="936" y="181" font-size="18" font-weight="700" fill="#172331">Task Record 001</text>
+    <text x="936" y="210" font-size="14" fill="#506579">Owner Group A</text>
+
+    <rect x="892" y="320" width="230" height="92" rx="12" fill="#ffffff" stroke="#cfd9e2"/>
+    <text x="936" y="357" font-size="18" font-weight="700" fill="#172331">Task Record 002</text>
+    <text x="936" y="386" font-size="14" fill="#506579">Owner Group B</text>
+  </g>
+
+  <rect x="88" y="456" width="1034" height="50" rx="10" fill="#e7f0f4"/>
+  <text x="112" y="487" font-family="Arial, sans-serif" font-size="15" fill="#506579">Synthetic recreation: multiple task relationships can require explicit ownership review before a wave decision.</text>
+</svg>
