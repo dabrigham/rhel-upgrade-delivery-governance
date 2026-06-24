@@ -27,7 +27,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify public export
-        run: ./scripts/verify_public_export.sh
+        run: |
+          ./scripts/verify_public_export.sh || {
+            echo "----- privacy_scan_report.md -----"
+            cat privacy_scan_report.md || true
+            exit 1
+          }
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
