@@ -34,6 +34,21 @@ SKIP_FILES = {
     "sensitive_terms.txt",
 }
 RAW_SCREENSHOT_EXTENSIONS = {".bmp", ".gif", ".jpeg", ".jpg", ".png", ".tif", ".tiff", ".webp"}
+GITHUB_PERMISSION_KEYS = {
+    "actions",
+    "checks",
+    "contents",
+    "deployments",
+    "discussions",
+    "id-token",
+    "issues",
+    "packages",
+    "pages",
+    "pull-requests",
+    "security-events",
+    "statuses",
+}
+GITHUB_PERMISSION_VALUES = {"none", "read", "write"}
 
 SECRET_PATTERNS = [
     ("email_address", re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")),
@@ -43,6 +58,10 @@ SECRET_PATTERNS = [
     ("aws_access_key", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
     ("private_key", re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----")),
     ("secret_assignment", re.compile(r"\b(password|passwd|token|secret|api[_-]?key)\s*[:=]", re.IGNORECASE)),
+    (
+        "long_credential_like_value",
+        re.compile(r"\b(?:ghp|gho|ghu|ghs|github_pat|xoxb|xoxp|ya29)[A-Za-z0-9_.-]{20,}\b"),
+    ),
     ("enterprise_record_id", re.compile(r"\b(CHG|CTASK|TASK|INC|RITM)\d{4,}\b", re.IGNORECASE)),
     (
         "internal_url",
@@ -121,8 +140,24 @@ def line_excerpt(line: str, limit: int = 120) -> str:
     return clean[: limit - 3] + "..."
 
 
-def is_allowed_pattern_match(name: str, value: str) -> bool:
-    return name == "ipv4_address" and value == "127.0.0.1"
+def is_github_actions_permission_line(path: Path, root: Path, line: str) -> bool:
+    relative_parts = path.relative_to(root).parts
+    if len(relative_parts) < 3 or relative_parts[:2] != (".github", "workflows"):
+        return False
+    if path.suffix.lower() not in {".yml", ".yaml"}:
+        return False
+
+    match = re.match(r"^\s*([A-Za-z-]+):\s*([A-Za-z-]+)\s*$", line)
+    if not match:
+        return False
+    key, value = match.group(1).lower(), match.group(2).lower()
+    return key in GITHUB_PERMISSION_KEYS and value in GITHUB_PERMISSION_VALUES
+
+
+def is_allowed_pattern_match(name: str, value: str, path: Path, root: Path, line: str) -> bool:
+    if name == "ipv4_address" and value == "127.0.0.1":
+        return True
+    return name == "secret_assignment" and is_github_actions_permission_line(path, root, line)
 
 
 def scan_file(path: Path, root: Path, deny_terms: list[str]) -> tuple[list[Finding], set[str]]:
@@ -145,7 +180,7 @@ def scan_file(path: Path, root: Path, deny_terms: list[str]) -> tuple[list[Findi
 
         for name, pattern in SECRET_PATTERNS:
             for match in pattern.finditer(line):
-                if not is_allowed_pattern_match(name, match.group(0)):
+                if not is_allowed_pattern_match(name, match.group(0), path, root, line):
                     findings.append(Finding(name, path.relative_to(root), line_number, line_excerpt(line)))
 
         if path.suffix.lower() in PROPER_NOUN_EXTENSIONS:
